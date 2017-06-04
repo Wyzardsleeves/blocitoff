@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="blocitoff">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Base Project</title>
@@ -7,6 +7,33 @@
 </head>
 <body>
     <h1>Test</h1>
+    <ui-view></ui-view>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!-- AngularUI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <!-- FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDJSD4V7MuM1iQT578jw9UYzvuxQ13K3FE",
+        authDomain: "blocitoff-2a543.firebaseapp.com",
+        databaseURL: "https://blocitoff-2a543.firebaseio.com",
+        projectId: "blocitoff-2a543",
+        storageBucket: "blocitoff-2a543.appspot.com",
+        messagingSenderId: "853429678822"
+    };
+    firebase.initializeApp(config);
+    </script>
+
     <script src="/scripts/app.js"></script>
 </body>
 </html>
+
+<!-- add this to the package.json if it starts acting up -->
+<!-- "@uirouter/angularjs": "^1.0.3", -->
