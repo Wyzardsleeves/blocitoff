@@ -1,1 +1,19 @@
-<h1>Home Pages</h1>
+<div class="list">
+    <h2>Current Tasks</h2>
+</div>
+<div class="home" ng-repeat="task in home.tasks">
+    <span class="ion-close-round" ng-click="home.markOff"><span>
+    <h2>{{task.content}}</h2>
+</div>
+<!-- optional preview feature I might tweak later
+<div class="home">
+    <h2>{{addTask.content}}</h2>
+</div>
+-->
+<div class="bottom-field">
+    <form class="input" ng-submit="home.addTask(addTask.content)">
+        <h5>Add Task: </h5>
+        <input type="text" name="newtask" class="text-field" ng-model="addTask.content">
+        <input type="submit" value="Add" class="add-button">
+    </form>
+</div>

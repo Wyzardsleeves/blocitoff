@@ -1,0 +1,60 @@
+html{
+    font-family: 'Exo', sans-serif;
+    font-size: 22px;
+    background-color: lightgray;
+}
+
+body{
+    margin: 0 100px 0 100px;
+    padding: 0 20px 0 20px;
+    width: 75%;
+    background-color: white;
+    height: 100%;
+}
+
+.app-name h1, .app-name span{
+    display: inline;
+    font-size: 40px;
+}
+
+.app-name span{
+    color: green;
+}
+
+.list h2{
+    font-size: 28px;
+}
+
+.home span, .home h2{
+    display: inline;
+    font-size: 18px;
+    color: black;
+}
+
+.home span{
+    color: red;
+}
+
+.bottom-field{
+    float: bottom;
+    position: absolute;
+    bottom: 10px;
+}
+
+.bottom-field h5{
+    display: inline;
+}
+
+.bottom-field form{
+    display: inline;
+}
+
+.bottom-field text-field{
+    width: 900px;
+}
+
+/*
+font-family: 'Exo', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'News Cycle', sans-serif;
+*/
