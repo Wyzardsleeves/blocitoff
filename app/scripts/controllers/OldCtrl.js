@@ -1,5 +1,5 @@
 (function(){
-    function HomeCtrl($scope, Task){
+    function OldCtrl($scope, Task){
         this.tasks = Task.all;
         this.addTask = Task.addTask;
         this.setStatus = Task.status;
@@ -16,5 +16,5 @@
 
     angular
         .module('blocitoff')
-        .controller('HomeCtrl', HomeCtrl);
+        .controller('OldCtrl', OldCtrl);
 })();

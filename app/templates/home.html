@@ -1,9 +1,20 @@
+<div class="old-page">
+    <a ui-sref="old"><h4>Old Task</h4><span class="ion-chevron-right"></span></a>
+</div>
 <div class="list">
     <h2>Current Tasks</h2>
+    <div class="legend">
+        <h2>Priority Level: </h2>
+        <h2><span class="ion-fireball"></span> Urgent </h2>
+        <h2><span class="ion-flame"></span> High </h2>
+        <h2><span class="ion-ios-circle-filled"></span> Standard </h2>
+    </div>
 </div>
-<div class="home" ng-repeat="task in home.tasks">
-    <span class="ion-close-round" ng-click="home.markOff"><span>
+<div class="home" ng-show="true" ng-repeat="task in home.tasks">
+    <span class="ion-android-checkbox-outline-blank" ng-click="home.markOff"><span>
     <h2>{{task.content}}</h2>
+    <h2>{{task.description}}</h2>
+    <h2><span class={{task.priority}}></span></h2>
 </div>
 <!-- optional preview feature I might tweak later
 <div class="home">
@@ -11,9 +22,29 @@
 </div>
 -->
 <div class="bottom-field">
-    <form class="input" ng-submit="home.addTask(addTask.content)">
-        <h5>Add Task: </h5>
-        <input type="text" name="newtask" class="text-field" ng-model="addTask.content">
+    <form class="input" ng-submit="home.addTask(addTask.content, addTask.description, addTask.priority)">
+        <h5>Add Task | </h5>
+        <h5>N:</h5><input type="text" name="newName" id="myName" class="text-field" ng-model="addTask.content">
+        <h5>D:</h5><input type="text" name="description" id="myDescription" class="text-field" ng-model="addTask.description">
+        <select name="priority" class="dropdown-priority" ng-model="addTask.priority">
+            <option value=""></option>
+            <option value="ion-fireball">Urgent</option>
+            <option value="ion-flame">High</option>
+            <option value="ion-ios-circle-filled">Standard</option>
+        </select>
         <input type="submit" value="Add" class="add-button">
     </form>
 </div>
+
+
+<!-- Priority icons that I will use
+Priority----
+ion-fireball
+ion-flame
+ion-ios-circle-filled
+
+Status------
+ion-android-checkbox-outline
+ion-android-checkbox-outline-blank
+ion-ios-timer-outline
+-->

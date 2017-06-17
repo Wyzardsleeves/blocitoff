@@ -12,19 +12,77 @@ body{
     height: 100%;
 }
 
-.app-name h1, .app-name span{
+.app-name{
     display: inline;
-    font-size: 40px;
+    float: left;
 }
-
+.app-name img{
+    display: inline;
+    padding: 0 0 0 0;
+    height: 35px;
+}
+.app-name h1, .app-name span{
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: inline;
+}
 .app-name span{
     color: green;
+    display: inline;
+}
+
+.old-page{
+    padding: 10px 0 0 0;
+    float: right;
+}
+.old-page a{
+    text-decoration: none;
+    color: black;
+}
+
+.old-page h4{
+    display: inline;
+}
+.ion-chevron-right{
+    font-size: 20px;
+    padding: 0 0 0 10px;
+}
+.ion-backspace-outline{
+    font-size: 20px;
+    padding: 0 10px 0 0;
+}
+.old-page a:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+.list{
+    padding: 60px 0 0 0;
 }
 
 .list h2{
     font-size: 28px;
+    display: inline;
 }
 
+/* Priority group */
+.list .legend{
+    float: right;
+    padding: 5px 0 0 0; /*temp sollution*/
+}
+.legend h2, span{
+    font-size: 18px;
+    display: inline;
+}
+.legend h2{
+    padding: 0 10px 0 0;
+}
+.ion-fireball, .ion-flame, .ion-ios-circle-filled{font-size: 22px}
+.ion-fireball{color: red}
+.ion-flame{color: orange}
+.ion-ios-circle-filled{color: yellow}
+
+/* Completed task list */
 .home span, .home h2{
     display: inline;
     font-size: 18px;
@@ -33,24 +91,76 @@ body{
 
 .home span{
     color: red;
+    padding: 0 0 0 5px;
 }
 
+.ion-android-checkbox-outline{color: green}
+
+.home h2 .ion-fireball{color: red}
+.home h2 .ion-flame{color: orange}
+.home h2 .ion-ios-circle-filled{color: yellow}
+
+
+.home h2:first-child{
+}
+.home h2:nth-child(2){
+    font-size: 14px;
+    color: gray;
+}
+.home h2:nth-child(3){
+}
+
+
+/* Completed task list */
+.old span, .old h2{
+    display: inline;
+    font-size: 18px;
+    color: black;
+}
+
+.old span{
+    color: green;
+    padding: 0 0 0 5px;
+}
+
+.ion-android-checkbox-outline{color: green}
+
+.old h2 .ion-fireball{color: red}
+.old h2 .ion-flame{color: orange}
+.old h2 .ion-ios-circle-filled{color: yellow}
+
+
+.old h2:first-child{
+}
+.old h2:nth-child(2){
+    font-size: 14px;
+    color: gray;
+}
+.old h2:nth-child(3){
+}
+
+/* Info Entry */
 .bottom-field{
-    float: bottom;
     position: absolute;
     bottom: 10px;
 }
-
 .bottom-field h5{
     display: inline;
 }
-
+.bottom-field input:first-child{
+    width: 100px;
+}
 .bottom-field form{
     display: inline;
 }
-
 .bottom-field text-field{
     width: 900px;
+}
+#myDescription{
+    width: 300px;
+}
+#myName{
+    width: 150px;
 }
 
 /*

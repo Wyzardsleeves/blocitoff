@@ -1,0 +1,17 @@
+<div class="old-page">
+    <a ui-sref="home"><span class="ion-backspace-outline"></span><h4>Current Task</h4></a>
+</div>
+<div class="list">
+    <h2>Old Task</h2>
+    <div class="legend">
+        <h2>Status: </h2>
+        <h2><span class="ion-android-checkbox-outline"></span> Completed </h2>
+        <h2><span class="ion-ios-timer-outline"></span> Expired </h2>
+    </div>
+</div>
+<div class="old" ng-hide="false" ng-repeat="task in home.tasks">
+    <span class="ion-arrow-return-left"><span>
+    <h2>{{task.content}}</h2>
+    <h2>{{task.description}}</h2>
+    <h2 ng-show={{task.expired}}><span class="ion-ios-timer-outline"></span></h2>
+</div>

@@ -3,17 +3,19 @@
         var ref = firebase.database().ref().child("tasks");
         var tasks = $firebaseArray(ref);
 
-        function addTask(newCont){
-            tasks.$add({content: newCont});
+        //addTask function
+        function addTask(newCont, newDes, newPri){
+            tasks.$add({
+                content: newCont, 
+                description: newDes, 
+                priority: newPri 
+            });
             document.getElementsByClassName("input")[0].reset();
         };
 
         return{
-            //gets the task array
-            all: tasks,
-
-            //adds the task (I hope)
-            addTask: addTask              
+            all: tasks,         //gets the task array
+            addTask: addTask,   //adds the task
         };
     }
 

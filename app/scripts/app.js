@@ -11,6 +11,12 @@
                 url: '/',
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
+            })
+            //might work
+            .state('old', {
+                url: '/old',
+                controller: 'HomeCtrl as home',
+                templateUrl: '/templates/old.html'
             });
     }
 
