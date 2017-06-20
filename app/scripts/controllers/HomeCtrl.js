@@ -2,16 +2,25 @@
     function HomeCtrl($scope, Task){
         this.tasks = Task.all;
         this.addTask = Task.addTask;
-        this.setStatus = Task.status;
 
-        //sort function
-        
+        //sets task status to "complete
+        $scope.markOff = Task.toggleStatus;
 
-        //marks the task as completed
-        this.markOff = function(completed){
-            var moveToComp = completed;
-            completed.$remove();
+        /* this one works
+        //sets task status to "complete
+        $scope.markOff = function(task){
+            if(task.status == "active"){
+                task.status = "completed";
+            }
+            else if(task.status == "completed"){
+                task.status = "active";
+            }
+            $save(task);
         };
+        */
+
+        //sort function?
+
     };
 
     angular

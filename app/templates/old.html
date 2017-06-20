@@ -9,8 +9,8 @@
         <h2><span class="ion-ios-timer-outline"></span> Expired </h2>
     </div>
 </div>
-<div class="old" ng-hide="false" ng-repeat="task in home.tasks">
-    <span class="ion-arrow-return-left"><span>
+<div class="old" ng-show="task.status != 'active'" ng-repeat="task in home.tasks">
+    <span ng-click="markOff(task)" class="ion-arrow-return-left"><span>
     <h2>{{task.content}}</h2>
     <h2>{{task.description}}</h2>
     <h2 ng-show={{task.expired}}><span class="ion-ios-timer-outline"></span></h2>

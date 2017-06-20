@@ -8,14 +8,26 @@
             tasks.$add({
                 content: newCont, 
                 description: newDes, 
-                priority: newPri 
+                priority: newPri,
+                status: "active"
             });
             document.getElementsByClassName("input")[0].reset();
         };
 
+        function toggleStatus(task){
+            if(task.status == "active"){
+                task.status = "completed";
+            }
+            else if(task.status == "completed"){
+                task.status = "active";
+            }
+            tasks.$save(task);
+        };
+
         return{
-            all: tasks,         //gets the task array
-            addTask: addTask,   //adds the task
+            all: tasks,                 //gets the task array
+            addTask: addTask,           //adds the task
+            toggleStatus: toggleStatus  //changes status
         };
     }
 

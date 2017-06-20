@@ -2,12 +2,13 @@ html{
     font-family: 'Exo', sans-serif;
     font-size: 22px;
     background-color: lightgray;
+    height: 100%;
 }
 
 body{
     margin: 0 100px 0 100px;
     padding: 0 20px 0 20px;
-    width: 75%;
+    width: 85%;
     background-color: white;
     height: 100%;
 }
@@ -154,7 +155,7 @@ body{
     display: inline;
 }
 .bottom-field text-field{
-    width: 900px;
+    width: 100%;
 }
 #myDescription{
     width: 300px;

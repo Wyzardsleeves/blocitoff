@@ -10,8 +10,8 @@
         <h2><span class="ion-ios-circle-filled"></span> Standard </h2>
     </div>
 </div>
-<div class="home" ng-show="true" ng-repeat="task in home.tasks">
-    <span class="ion-android-checkbox-outline-blank" ng-click="home.markOff"><span>
+<div class="home" ng-show="task.status == 'active'" ng-repeat="task in home.tasks">
+    <span class="ion-android-checkbox-outline-blank" ng-click="markOff(task)"><span>
     <h2>{{task.content}}</h2>
     <h2>{{task.description}}</h2>
     <h2><span class={{task.priority}}></span></h2>
