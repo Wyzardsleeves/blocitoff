@@ -16,11 +16,6 @@
     <h2>{{task.description}}</h2>
     <h2><span class={{task.priority}}></span></h2>
 </div>
-<!-- optional preview feature I might tweak later
-<div class="home">
-    <h2>{{addTask.content}}</h2>
-</div>
--->
 <div class="bottom-field">
     <form class="input" ng-submit="home.addTask(addTask.content, addTask.description, addTask.priority)">
         <h5>Add Task | </h5>
@@ -28,6 +23,7 @@
         <h5>D:</h5><input type="text" name="description" id="myDescription" class="text-field" ng-model="addTask.description">
         <select name="priority" class="dropdown-priority" ng-model="addTask.priority">
             <option value=""></option>
+            <!-- ask Jason about this -->
             <option value="ion-fireball">Urgent</option>
             <option value="ion-flame">High</option>
             <option value="ion-ios-circle-filled">Standard</option>

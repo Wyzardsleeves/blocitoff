@@ -1,6 +1,7 @@
 (function(){
     function Task($firebaseArray){
-        var ref = firebase.database().ref().child("tasks");
+        //var ref = firebase.database().ref().child("tasks"); //unordered
+        var ref = firebase.database().ref().child("tasks").orderByChild("priority");
         var tasks = $firebaseArray(ref);
 
         //addTask function
