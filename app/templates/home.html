@@ -10,14 +10,15 @@
         <h2><span class="ion-ios-circle-filled"></span> Standard </h2>
     </div>
 </div>
-<div class="home" ng-show="task.status == 'active'" ng-repeat="task in home.tasks">
+<div class="home" ng-show="task.status == 'active'" ng-if="now - task.madeAt < 604800000" ng-repeat="task in home.tasks"> <!-- ng-if="now - task.madeAt < 10000" -->
     <span class="ion-android-checkbox-outline-blank" ng-click="markOff(task)"><span>
     <h2>{{task.content}}</h2>
     <h2>{{task.description}}</h2>
     <h2><span class={{task.priority}}></span></h2>
 </div>
 <div class="bottom-field">
-    <form class="input" ng-submit="home.addTask(addTask.content, addTask.description, addTask.priority)">
+    <!-- <form class="input" ng-submit="home.addTask(addTask.content, addTask.description, addTask.priority, 1288323623006 | date:'MM/dd/yyyy @ h:mma')"> -->
+    <form class="input" ng-submit="home.addTask(addTask.content, addTask.description, addTask.priority, now)">
         <h5>Add Task | </h5>
         <h5>N:</h5><input type="text" name="newName" id="myName" class="text-field" ng-model="addTask.content">
         <h5>D:</h5><input type="text" name="description" id="myDescription" class="text-field" ng-model="addTask.description">
@@ -29,18 +30,6 @@
             <option value="ion-ios-circle-filled">Standard</option>
         </select>
         <input type="submit" value="Add" class="add-button">
+        <h5>{{now | date:'MM/dd/yyyy @ h:mma'}}</h5>
     </form>
 </div>
-
-
-<!-- Priority icons that I will use
-Priority----
-ion-fireball
-ion-flame
-ion-ios-circle-filled
-
-Status------
-ion-android-checkbox-outline
-ion-android-checkbox-outline-blank
-ion-ios-timer-outline
--->

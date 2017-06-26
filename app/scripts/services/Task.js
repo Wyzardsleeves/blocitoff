@@ -5,16 +5,18 @@
         var tasks = $firebaseArray(ref);
 
         //addTask function
-        function addTask(newCont, newDes, newPri){
+        function addTask(newCont, newDes, newPri, newTime){
             tasks.$add({
                 content: newCont, 
                 description: newDes, 
                 priority: newPri,
-                status: "active"
+                status: "active",
+                madeAt: newTime
             });
             document.getElementsByClassName("input")[0].reset();
         };
 
+        //marks task as "completed" or restores it as "active
         function toggleStatus(task){
             if(task.status == "active"){
                 task.status = "completed";
@@ -25,10 +27,15 @@
             tasks.$save(task);
         };
 
+        function demolish(task){
+            tasks.$remove(task);
+        }        
+
         return{
             all: tasks,                 //gets the task array
             addTask: addTask,           //adds the task
-            toggleStatus: toggleStatus  //changes status
+            toggleStatus: toggleStatus, //changes status to completed
+            demolish: demolish
         };
     }
 
