@@ -3,6 +3,7 @@
 </div>
 <div class="list">
     <h2>Current Tasks</h2>
+    <h3> [task will expire after 3 min] </h3>
     <div class="legend">
         <h2>Priority Level: </h2>
         <h2><span class="ion-fireball"></span> Urgent </h2>
@@ -10,7 +11,7 @@
         <h2><span class="ion-ios-circle-filled"></span> Standard </h2>
     </div>
 </div>
-<div class="home" ng-show="task.status == 'active'" ng-if="now - task.madeAt < 604800000" ng-repeat="task in home.tasks"> <!-- ng-if="now - task.madeAt < 10000" -->
+<div class="home" ng-show="task.status == 'active'" ng-if="now - task.madeAt < 180000" ng-repeat="task in home.tasks"> <!-- ng-if="now - task.madeAt < 10000" -->
     <span class="ion-android-checkbox-outline-blank" ng-click="markOff(task)"><span>
     <h2>{{task.content}}</h2>
     <h2>{{task.description}}</h2>

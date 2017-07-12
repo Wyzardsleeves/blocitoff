@@ -4,9 +4,6 @@
         this.addTask = Task.addTask;
         this.setStatus = Task.status;
 
-        //sort function
-        
-
         //marks the task as completed
         this.markOff = function(completed){
             var moveToComp = completed;

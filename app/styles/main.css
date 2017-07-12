@@ -13,6 +13,7 @@ body{
     height: 100%;
 }
 
+
 .app-name{
     display: inline;
     float: left;
@@ -20,7 +21,7 @@ body{
 .app-name img{
     display: inline;
     padding: 0 0 0 0;
-    height: 35px;
+    height: 70px;
 }
 .app-name h1, .app-name span{
     font-size: 40px;
@@ -58,11 +59,17 @@ body{
 }
 
 .list{
-    padding: 60px 0 0 0;
+    padding: 80px 0 0 0;
 }
 
 .list h2{
     font-size: 28px;
+    display: inline;
+}
+
+.list h3{
+    font-size: 14px;
+    color: green;
     display: inline;
 }
 

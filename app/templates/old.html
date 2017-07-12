@@ -9,25 +9,25 @@
         <h2><span class="ion-ios-timer-outline"></span> Expired </h2>
     </div>
 </div>
-<div class="old" ng-show="task.status != 'active'" ng-if="now - task.madeAt < 604800000" ng-repeat="task in home.tasks">
+<div class="old" ng-show="task.status != 'active'" ng-if="now - task.madeAt < 180000" ng-repeat="task in home.tasks">
     <span ng-click="markOff(task)" class="ion-arrow-return-left"><span>
     <h2>{{task.content}}</h2>
     <h2>{{task.description}}</h2>
     <h2 ng-show="task.status == 'completed'"><span class="ion-android-checkbox-outline"></span></h2>
 </div>
-<div class="old" ng-if="now - task.madeAt > 604800000" ng-repeat="task in home.tasks">
-    <span ng-click="destroy(task)" class="ion-close-round"><span>      
+<div class="old" ng-if="now - task.madeAt > 180000" ng-repeat="task in home.tasks">
+    <span ng-click="destroy(task)" class="ion-close-round"><span>
     <h2>{{task.content}}</h2>
     <h2>{{task.description}}</h2>
     <h2><span class="ion-ios-timer-outline"></span></h2>
 </div>
 
 
-<!-- 
+<!--
 {{now | date:'short'}}
 
 
 {{1288323623006 | date:'MM/dd/yyyy @ h:mma'}}
 {{0000000000000 | date:'MM/dd/yyyy @ h:mma'}}
-604,800,000 
+604,800,000
 -->
