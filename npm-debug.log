@@ -1,0 +1,87 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose readDependencies loading dependencies from /media/sf_Development/blocitoff/package.json
+5 verbose install where, deps [ '/media/sf_Development/blocitoff',
+5 verbose install   [ 'angular',
+5 verbose install     'angular-ui-router',
+5 verbose install     'hapi',
+5 verbose install     'path',
+5 verbose install     'connect-modrewrite',
+5 verbose install     'es5-shim' ] ]
+6 verbose install where, peers [ '/media/sf_Development/blocitoff', [] ]
+7 verbose installManyTop reading for lifecycle /media/sf_Development/blocitoff/package.json
+8 info preinstall bloc-frontend-project-starter@0.0.3
+9 verbose installManyTop reading scoped package data from /media/sf_Development/blocitoff/node_modules/angular/package.json
+10 verbose installManyTop reading scoped package data from /media/sf_Development/blocitoff/node_modules/angular-ui-router/package.json
+11 verbose installManyTop reading scoped package data from /media/sf_Development/blocitoff/node_modules/bower/package.json
+12 verbose installManyTop reading scoped package data from /media/sf_Development/blocitoff/node_modules/connect-modrewrite/package.json
+13 verbose installManyTop reading scoped package data from /media/sf_Development/blocitoff/node_modules/es5-shim/package.json
+14 verbose installManyTop reading scoped package data from /media/sf_Development/blocitoff/node_modules/hapi/package.json
+15 verbose installManyTop reading scoped package data from /media/sf_Development/blocitoff/node_modules/path/package.json
+16 info package.json connect-modrewrite@0.7.12 No license field.
+17 info package.json path@0.4.10 path is also the name of a node core module.
+18 info package.json hapi@7.5.3 No license field.
+19 verbose readDependencies loading dependencies from /media/sf_Development/blocitoff/package.json
+20 verbose targetResolver reading package data from /media/sf_Development/blocitoff/node_modules/angular/package.json
+21 verbose targetResolver reading package data from /media/sf_Development/blocitoff/node_modules/angular-ui-router/package.json
+22 verbose targetResolver reading package data from /media/sf_Development/blocitoff/node_modules/bower/package.json
+23 verbose targetResolver reading package data from /media/sf_Development/blocitoff/node_modules/connect-modrewrite/package.json
+24 verbose targetResolver reading package data from /media/sf_Development/blocitoff/node_modules/es5-shim/package.json
+25 verbose targetResolver reading package data from /media/sf_Development/blocitoff/node_modules/hapi/package.json
+26 verbose targetResolver reading package data from /media/sf_Development/blocitoff/node_modules/path/package.json
+27 verbose targetResolver reading package data from /media/sf_Development/blocitoff/node_modules/.bin/hapi/package.json
+28 verbose targetResolver reading package data from /media/sf_Development/blocitoff/node_modules/.bin/hapi.cmd/package.json
+29 verbose already installed skipping path@^0.4.9 /media/sf_Development/blocitoff
+30 verbose already installed skipping connect-modrewrite@^0.7.9 /media/sf_Development/blocitoff
+31 verbose already installed skipping es5-shim@^4.0.1 /media/sf_Development/blocitoff
+32 verbose already installed skipping angular@^1.6.4 /media/sf_Development/blocitoff
+33 verbose already installed skipping angular-ui-router@^1.0.3 /media/sf_Development/blocitoff
+34 verbose already installed skipping hapi@~7.5.0 /media/sf_Development/blocitoff
+35 silly install resolved []
+36 info build /media/sf_Development/blocitoff
+37 info linkStuff bloc-frontend-project-starter@0.0.3
+38 silly linkStuff bloc-frontend-project-starter@0.0.3 has /media/sf_Development as its parent node_modules
+39 verbose linkBins bloc-frontend-project-starter@0.0.3
+40 verbose linkMans bloc-frontend-project-starter@0.0.3
+41 verbose rebuildBundles bloc-frontend-project-starter@0.0.3
+42 verbose rebuildBundles [ '.bin',
+42 verbose rebuildBundles   'angular',
+42 verbose rebuildBundles   'angular-ui-router',
+42 verbose rebuildBundles   'bower',
+42 verbose rebuildBundles   'connect-modrewrite',
+42 verbose rebuildBundles   'es5-shim',
+42 verbose rebuildBundles   'hapi',
+42 verbose rebuildBundles   'path' ]
+43 verbose rebuild bundle /media/sf_Development/blocitoff/node_modules/bower
+44 info build /media/sf_Development/blocitoff/node_modules/bower
+45 info preinstall bower@1.8.0
+46 info linkStuff bower@1.8.0
+47 silly linkStuff bower@1.8.0 has /media/sf_Development/blocitoff/node_modules as its parent node_modules
+48 verbose linkBins bower@1.8.0
+49 verbose link bins [ { bower: 'bin/bower' },
+49 verbose link bins   '/media/sf_Development/blocitoff/node_modules/.bin',
+49 verbose link bins   false ]
+50 verbose linkMans bower@1.8.0
+51 verbose rebuildBundles bower@1.8.0
+52 silly gentlyRm /media/sf_Development/blocitoff/node_modules/.bin/bower is being purged
+53 verbose gentlyRm don't care about contents; nuking /media/sf_Development/blocitoff/node_modules/.bin/bower
+54 verbose stack Error: EROFS: read-only file system, symlink '../bower/bin/bower' -> '/media/sf_Development/blocitoff/node_modules/.bin/bower'
+54 verbose stack     at Error (native)
+55 verbose cwd /media/sf_Development/blocitoff
+56 error Linux 4.4.0-83-generic
+57 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install"
+58 error node v4.4.7
+59 error npm  v2.15.8
+60 error path ../bower/bin/bower
+61 error code EROFS
+62 error errno -30
+63 error syscall symlink
+64 error rofs EROFS: read-only file system, symlink '../bower/bin/bower' -> '/media/sf_Development/blocitoff/node_modules/.bin/bower'
+64 error rofs This is most likely not a problem with npm itself
+64 error rofs and is related to the file system being read-only.
+64 error rofs
+64 error rofs Often virtualized file systems, or other file systems
+64 error rofs that don't support symlinks, give this error.
+65 verbose exit [ -30, true ]
